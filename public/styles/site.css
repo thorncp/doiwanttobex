@@ -1,0 +1,13 @@
+body {
+  margin: 24px auto;
+  text-align: center;
+  width: 960px;
+}
+
+.huge {
+  font-size: 12em;
+}
+
+#footer {
+  color: gray;
+}
