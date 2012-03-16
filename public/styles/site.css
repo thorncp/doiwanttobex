@@ -10,4 +10,11 @@ body {
 
 #footer {
   color: gray;
+  margin-top: 30px;
 }
+
+input, button {
+  height: 36px;
+  font-size: 1.5em;
+}
+
