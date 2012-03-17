@@ -16,6 +16,10 @@ get "/:term" do
   erb :show, locals: { term: term }
 end
 
+not_found do
+  erb :not_found
+end
+
 def indefinitized?(word)
   word =~ /^a(n)?\s/i
 end
