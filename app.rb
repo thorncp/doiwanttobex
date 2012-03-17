@@ -2,7 +2,11 @@ require "sinatra"
 require 'cgi'
 
 get "/" do
-  erb :index
+  if params[:term]
+    redirect "/" + params[:term]
+  else
+    erb :index
+  end
 end
 
 get "/:term" do
