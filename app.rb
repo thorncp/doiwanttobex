@@ -6,10 +6,8 @@ get "/" do
 end
 
 get "/:term" do
-  term = CGI.unescape params[:term].strip
+  term = CGI.unescape params[:term].strip.squeeze(" ")
   term = indefinitize(term) unless indefinitized?(term)
-  term = term.split.map(&:capitalize).join(" ")
-  term = term[0].downcase + term[1..-1]
 
   erb :show, locals: { term: term }
 end
